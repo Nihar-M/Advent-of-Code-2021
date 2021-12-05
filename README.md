@@ -1,3 +1,3 @@
 # Advent-of-Code-2021
 
-My attempt at Advent of Code 2021 in C
+My attempt at Advent of Code 2021 in plain C
