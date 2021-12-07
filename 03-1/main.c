@@ -11,25 +11,24 @@ int main()
     }
 
     int counter[12] = {0};
-    char current[13];
-    (void) counter;    
-    
+    char current[12];
+
     while (!feof(fd))
     {
         fscanf(fd,"%s12",current);
-	for (int i = 0; i < 12; i++)
-	{
-	    counter[i] += (current[i] == '1') ? 1 : -1;
-	}
+        for (int i = 0; i < 12; i++)
+        {
+            counter[i] += (current[i] == '1') ? 1 : -1;
+        }
     }
 
-    int gamma_rate = 0;   
+    int gamma_rate = 0;
 
     for (int i = 0; i < 12; i++)
     {
- 	printf("%c",(counter[i]<0) ? '0' : '1');
-	gamma_rate <<= 1;
-	gamma_rate += (counter[i] > 0);
+        printf("%c",(counter[i]<0) ? '0' : '1');
+        gamma_rate <<= 1;
+        gamma_rate += (counter[i] > 0);
     }
 
     int epsilon_rate = (1 << 12)-1  - gamma_rate; 
