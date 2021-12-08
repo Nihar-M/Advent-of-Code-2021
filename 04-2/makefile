@@ -5,7 +5,7 @@ all: main run
 	
 
 main: main.c
-	$(CC) main.c -o main $(CFLAGS)
+	$(CC) main.c -o main.out $(CFLAGS)
 
 run:
-	./main
+	./main.out
